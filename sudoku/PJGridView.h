@@ -11,6 +11,7 @@
 
 @interface PJGridView : UIView
 
-- (void)drawGrid;
--(void) setCellValue: (int) val AtRow: (int) row AndCol: (int) col;
+-(void)drawGrid;
+-(void) setCellValue: (int) val atRow: (int) row andCol: (int) col;
+-(void) setIsInitialValue: (BOOL) isInitialValue atRow: (int) row andCol: (int) col;
 @end

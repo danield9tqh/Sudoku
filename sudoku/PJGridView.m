@@ -52,6 +52,7 @@
             cellView.backgroundColor = [UIColor whiteColor];
             
             
+            
             // add view as subview and object to array
             [self addSubview:cellView];
             [_gridCellArray addObject: cellView];
@@ -62,7 +63,7 @@
 /* method to set a given cell value at a specified row and column in an existing 
     sudoku grid
  */
--(void) setCellValue: (int) val AtRow: (int) row AndCol: (int) col {
+-(void) setCellValue: (int) val atRow: (int) row andCol: (int) col {
     int adjustedIndex = (row*9) + col;
     
     // only show non zero initial values (0 means empty value)
@@ -70,6 +71,13 @@
         PJGridCellView* current = [_gridCellArray objectAtIndex:adjustedIndex];
         [current setCellValue:val];
     }
+}
+
+-(void) setIsInitialValue: (BOOL) isInitialValue atRow: (int) row andCol: (int) col {
+    int adjustedIndex = (row*9) + col;
+    
+    PJGridCellView* current = [_gridCellArray objectAtIndex:adjustedIndex];
+    [current setIsInitialValue:isInitialValue];
 }
 
 

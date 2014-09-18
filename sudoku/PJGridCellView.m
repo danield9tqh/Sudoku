@@ -13,6 +13,7 @@
     int _row;
     int _col;
     int _value;
+    BOOL _isInitialValue;
 }
 
 @end
@@ -28,6 +29,7 @@
     // button fields
     _row = row;
     _col = col;
+
     
     //creating a button
     CGSize cellSize = self.bounds.size;
@@ -35,7 +37,6 @@
     _button = [[UIButton alloc] initWithFrame:buttonFrame];
     
     //button properties (highlight when touched, released when finger lifts up)
-    [_button setShowsTouchWhenHighlighted:YES];
     [_button addTarget:self action:@selector(buttonHighlight:) forControlEvents:UIControlEventTouchDown];
     [_button addTarget:self action:@selector(buttonSelected:) forControlEvents:UIControlEventTouchUpInside];
     [_button addTarget:self action:@selector(buttonSelected:) forControlEvents:UIControlEventTouchUpOutside];
@@ -47,9 +48,15 @@
     [_button setTitle:[NSString stringWithFormat:@"%d",_value] forState:UIControlStateNormal];
     [_button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
 }
+-(void) setIsInitialValue: (BOOL) isInitialValue {
+    _isInitialValue = isInitialValue;
+    [_button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+}
 
 -(void) buttonHighlight: (id) sender {
-    [_button setBackgroundColor:[UIColor yellowColor]];
+    if (!_isInitialValue) {
+        [_button setBackgroundColor:[UIColor yellowColor]];
+    }
 }
 -(void) buttonSelected:(id) sender {
     [_button setBackgroundColor:[UIColor whiteColor]];

@@ -54,6 +54,7 @@ int initialGrid[9][9] = {
     
     // setting up values for the grid
     [self initGridValues];
+
 }
 
 
@@ -69,7 +70,11 @@ int initialGrid[9][9] = {
 -(void) initGridValues {
     for (int col = 0; col < 9; col++) {
         for (int row = 0; row < 9; row++) {
-            [_gridView setCellValue:initialGrid[col][row] AtRow:row AndCol:col];
+            [_gridView setCellValue:initialGrid[col][row] atRow:row andCol:col];
+            if (initialGrid[col][row] != 0) {
+                [_gridView setIsInitialValue:YES atRow:row andCol:col];
+            }
+
         }
     }
 }

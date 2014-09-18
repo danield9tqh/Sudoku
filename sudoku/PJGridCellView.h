@@ -11,4 +11,5 @@
 @interface PJGridCellView : UIView
 -(void) initButtonAtRow:(int) row AndCol: (int) col;
 -(void) setCellValue: (int) value;
+-(void) setIsInitialValue: (BOOL) isInitialValue;
 @end
