@@ -1,5 +1,5 @@
 //
-//  PJAppDelegate.h
+//  PJViewController.h
 //  sudoku
 //
 //  Created by Jean Sung and Paula Yuan on 9/11/14.
@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DCPYGridView.h"
+#import "DCPYGridModel.h"
+#import "DCPYNumPadView.h"
 
-@interface PJAppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface DCPYViewController : UIViewController
 
 @end

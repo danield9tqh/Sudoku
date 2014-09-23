@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Paula Jean. All rights reserved.
 //
 
-#import "PJAppDelegate.h"
+#import "DCPYAppDelegate.h"
 
-@implementation PJAppDelegate
+@implementation DCPYAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

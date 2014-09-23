@@ -12,17 +12,19 @@
 		0FE98FC719C25CCD00D46491 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FE98FC619C25CCD00D46491 /* UIKit.framework */; };
 		0FE98FCD19C25CCD00D46491 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0FE98FCB19C25CCD00D46491 /* InfoPlist.strings */; };
 		0FE98FCF19C25CCD00D46491 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE98FCE19C25CCD00D46491 /* main.m */; };
-		0FE98FD319C25CCD00D46491 /* PJAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE98FD219C25CCD00D46491 /* PJAppDelegate.m */; };
+		0FE98FD319C25CCD00D46491 /* DCPYAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE98FD219C25CCD00D46491 /* DCPYAppDelegate.m */; };
 		0FE98FD619C25CCD00D46491 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FE98FD419C25CCD00D46491 /* Main.storyboard */; };
-		0FE98FD919C25CCD00D46491 /* PJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE98FD819C25CCD00D46491 /* PJViewController.m */; };
+		0FE98FD919C25CCD00D46491 /* DCPYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE98FD819C25CCD00D46491 /* DCPYViewController.m */; };
 		0FE98FDB19C25CCD00D46491 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FE98FDA19C25CCD00D46491 /* Images.xcassets */; };
 		0FE98FE219C25CCD00D46491 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FE98FE119C25CCD00D46491 /* XCTest.framework */; };
 		0FE98FE319C25CCD00D46491 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FE98FC219C25CCD00D46491 /* Foundation.framework */; };
 		0FE98FE419C25CCE00D46491 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FE98FC619C25CCD00D46491 /* UIKit.framework */; };
 		0FE98FEC19C25CCE00D46491 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0FE98FEA19C25CCE00D46491 /* InfoPlist.strings */; };
 		0FE98FEE19C25CCE00D46491 /* sudokuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE98FED19C25CCE00D46491 /* sudokuTests.m */; };
-		0FE98FF919C25FF500D46491 /* PJGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE98FF819C25FF500D46491 /* PJGridView.m */; };
-		0FE98FFC19C2600100D46491 /* PJGridCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE98FFB19C2600100D46491 /* PJGridCellView.m */; };
+		0FE98FF919C25FF500D46491 /* DCPYGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE98FF819C25FF500D46491 /* DCPYGridView.m */; };
+		0FE98FFC19C2600100D46491 /* DCPYGridCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE98FFB19C2600100D46491 /* DCPYGridCellView.m */; };
+		65EC271719CE6508004EC5E6 /* DCPYGridModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EC271619CE6508004EC5E6 /* DCPYGridModel.m */; };
+		65EC271A19CE71F2004EC5E6 /* DCPYNumPadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EC271919CE71F2004EC5E6 /* DCPYNumPadView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,21 +46,25 @@
 		0FE98FCC19C25CCD00D46491 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0FE98FCE19C25CCD00D46491 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0FE98FD019C25CCD00D46491 /* sudoku-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "sudoku-Prefix.pch"; sourceTree = "<group>"; };
-		0FE98FD119C25CCD00D46491 /* PJAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PJAppDelegate.h; sourceTree = "<group>"; };
-		0FE98FD219C25CCD00D46491 /* PJAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PJAppDelegate.m; sourceTree = "<group>"; };
+		0FE98FD119C25CCD00D46491 /* DCPYAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCPYAppDelegate.h; sourceTree = "<group>"; };
+		0FE98FD219C25CCD00D46491 /* DCPYAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCPYAppDelegate.m; sourceTree = "<group>"; };
 		0FE98FD519C25CCD00D46491 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0FE98FD719C25CCD00D46491 /* PJViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PJViewController.h; sourceTree = "<group>"; };
-		0FE98FD819C25CCD00D46491 /* PJViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PJViewController.m; sourceTree = "<group>"; };
+		0FE98FD719C25CCD00D46491 /* DCPYViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCPYViewController.h; sourceTree = "<group>"; };
+		0FE98FD819C25CCD00D46491 /* DCPYViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCPYViewController.m; sourceTree = "<group>"; };
 		0FE98FDA19C25CCD00D46491 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0FE98FE019C25CCD00D46491 /* sudokuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sudokuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE98FE119C25CCD00D46491 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		0FE98FE919C25CCE00D46491 /* sudokuTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "sudokuTests-Info.plist"; sourceTree = "<group>"; };
 		0FE98FEB19C25CCE00D46491 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0FE98FED19C25CCE00D46491 /* sudokuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sudokuTests.m; sourceTree = "<group>"; };
-		0FE98FF719C25FF500D46491 /* PJGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJGridView.h; sourceTree = "<group>"; };
-		0FE98FF819C25FF500D46491 /* PJGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PJGridView.m; sourceTree = "<group>"; };
-		0FE98FFA19C2600100D46491 /* PJGridCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJGridCellView.h; sourceTree = "<group>"; };
-		0FE98FFB19C2600100D46491 /* PJGridCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PJGridCellView.m; sourceTree = "<group>"; };
+		0FE98FF719C25FF500D46491 /* DCPYGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPYGridView.h; sourceTree = "<group>"; };
+		0FE98FF819C25FF500D46491 /* DCPYGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPYGridView.m; sourceTree = "<group>"; };
+		0FE98FFA19C2600100D46491 /* DCPYGridCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPYGridCellView.h; sourceTree = "<group>"; };
+		0FE98FFB19C2600100D46491 /* DCPYGridCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPYGridCellView.m; sourceTree = "<group>"; };
+		65EC271519CE6508004EC5E6 /* DCPYGridModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCPYGridModel.h; path = ../DCPYGridModel.h; sourceTree = "<group>"; };
+		65EC271619CE6508004EC5E6 /* DCPYGridModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCPYGridModel.m; path = ../DCPYGridModel.m; sourceTree = "<group>"; };
+		65EC271819CE71F2004EC5E6 /* DCPYNumPadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPYNumPadView.h; sourceTree = "<group>"; };
+		65EC271919CE71F2004EC5E6 /* DCPYNumPadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPYNumPadView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,15 +124,19 @@
 		0FE98FC819C25CCD00D46491 /* sudoku */ = {
 			isa = PBXGroup;
 			children = (
-				0FE98FD119C25CCD00D46491 /* PJAppDelegate.h */,
-				0FE98FD219C25CCD00D46491 /* PJAppDelegate.m */,
+				65EC271519CE6508004EC5E6 /* DCPYGridModel.h */,
+				65EC271619CE6508004EC5E6 /* DCPYGridModel.m */,
+				65EC271819CE71F2004EC5E6 /* DCPYNumPadView.h */,
+				65EC271919CE71F2004EC5E6 /* DCPYNumPadView.m */,
+				0FE98FD119C25CCD00D46491 /* DCPYAppDelegate.h */,
+				0FE98FD219C25CCD00D46491 /* DCPYAppDelegate.m */,
 				0FE98FD419C25CCD00D46491 /* Main.storyboard */,
-				0FE98FD719C25CCD00D46491 /* PJViewController.h */,
-				0FE98FD819C25CCD00D46491 /* PJViewController.m */,
-				0FE98FF719C25FF500D46491 /* PJGridView.h */,
-				0FE98FF819C25FF500D46491 /* PJGridView.m */,
-				0FE98FFA19C2600100D46491 /* PJGridCellView.h */,
-				0FE98FFB19C2600100D46491 /* PJGridCellView.m */,
+				0FE98FD719C25CCD00D46491 /* DCPYViewController.h */,
+				0FE98FD819C25CCD00D46491 /* DCPYViewController.m */,
+				0FE98FF719C25FF500D46491 /* DCPYGridView.h */,
+				0FE98FF819C25FF500D46491 /* DCPYGridView.m */,
+				0FE98FFA19C2600100D46491 /* DCPYGridCellView.h */,
+				0FE98FFB19C2600100D46491 /* DCPYGridCellView.m */,
 				0FE98FDA19C25CCD00D46491 /* Images.xcassets */,
 				0FE98FC919C25CCD00D46491 /* Supporting Files */,
 			);
@@ -206,9 +216,9 @@
 		0FE98FB719C25CCD00D46491 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = PJ;
+				CLASSPREFIX = DCPY;
 				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = "Paula Jean";
+				ORGANIZATIONNAME = "Daniel Cogan & Paula Yuan";
 				TargetAttributes = {
 					0FE98FDF19C25CCD00D46491 = {
 						TestTargetID = 0FE98FBE19C25CCD00D46491;
@@ -260,11 +270,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FE98FFC19C2600100D46491 /* PJGridCellView.m in Sources */,
-				0FE98FD319C25CCD00D46491 /* PJAppDelegate.m in Sources */,
-				0FE98FD919C25CCD00D46491 /* PJViewController.m in Sources */,
-				0FE98FF919C25FF500D46491 /* PJGridView.m in Sources */,
+				0FE98FFC19C2600100D46491 /* DCPYGridCellView.m in Sources */,
+				0FE98FD319C25CCD00D46491 /* DCPYAppDelegate.m in Sources */,
+				0FE98FD919C25CCD00D46491 /* DCPYViewController.m in Sources */,
+				0FE98FF919C25FF500D46491 /* DCPYGridView.m in Sources */,
 				0FE98FCF19C25CCD00D46491 /* main.m in Sources */,
+				65EC271A19CE71F2004EC5E6 /* DCPYNumPadView.m in Sources */,
+				65EC271719CE6508004EC5E6 /* DCPYGridModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

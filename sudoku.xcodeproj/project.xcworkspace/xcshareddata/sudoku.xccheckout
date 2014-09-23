@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>159E8631-3775-4087-9BDC-4BD127D78C8D</string>
+	<string>8678762E-5938-4D23-ACE6-8A3736755C8D</string>
 	<key>IDESourceControlProjectName</key>
 	<string>sudoku</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>2DFFB516-89CA-4AA6-A7EE-B768C809B7F9</key>
-		<string>https://github.com/jeansung/CS121-SudokuView.git</string>
+		<key>8298EC8B5542DB4CF44DA7F0AD8E980C3EE538A2</key>
+		<string>https://github.com/danield9tqh/Sudoku</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>sudoku/sudoku.xcodeproj/project.xcworkspace</string>
+	<string>sudoku.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>2DFFB516-89CA-4AA6-A7EE-B768C809B7F9</key>
-		<string>../../..</string>
+		<key>8298EC8B5542DB4CF44DA7F0AD8E980C3EE538A2</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/jeansung/CS121-SudokuView.git</string>
+	<string>https://github.com/danield9tqh/Sudoku</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>2DFFB516-89CA-4AA6-A7EE-B768C809B7F9</string>
+	<string>8298EC8B5542DB4CF44DA7F0AD8E980C3EE538A2</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>2DFFB516-89CA-4AA6-A7EE-B768C809B7F9</string>
+			<string>8298EC8B5542DB4CF44DA7F0AD8E980C3EE538A2</string>
 			<key>IDESourceControlWCCName</key>
-			<string>CS121-SudokuView</string>
+			<string>sudoku</string>
 		</dict>
 	</array>
 </dict>

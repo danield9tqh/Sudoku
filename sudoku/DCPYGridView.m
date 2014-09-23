@@ -6,15 +6,15 @@
 //  Copyright (c) 2014 Paula Jean. All rights reserved.
 //
 
-#import "PJGridView.h"
+#import "DCPYGridView.h"
 
-@interface PJGridView () {
+@interface DCPYGridView () {
     NSMutableArray* _gridCellArray;
 }
 
 @end
 
-@implementation PJGridView
+@implementation DCPYGridView
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -47,11 +47,10 @@
             
             // frame for each cell, intialaize grid cell view object
             CGRect cellFrame = CGRectMake(x, y, size, size);
-            PJGridCellView* cellView = [[PJGridCellView alloc] initWithFrame:cellFrame];
-            [cellView initButtonAtRow:r AndCol:c];
+            DCPYGridCellView* cellView = [[DCPYGridCellView alloc] initWithFrame:cellFrame];
+            [cellView initButtonAtRow:r AndColumn:c];
+            
             cellView.backgroundColor = [UIColor whiteColor];
-            
-            
             
             // add view as subview and object to array
             [self addSubview:cellView];
@@ -63,21 +62,22 @@
 /* method to set a given cell value at a specified row and column in an existing 
     sudoku grid
  */
--(void) setCellValue: (int) val atRow: (int) row andCol: (int) col {
+-(void) setCellValue: (int) val atRow: (int) row andColumn: (int) col {
     int adjustedIndex = (row*9) + col;
-    
-    // only show non zero initial values (0 means empty value)
-    if (val !=0) {
-        PJGridCellView* current = [_gridCellArray objectAtIndex:adjustedIndex];
-        [current setCellValue:val];
-    }
+    DCPYGridCellView* current = [_gridCellArray objectAtIndex:adjustedIndex];
+    [current setCellValue:val];
 }
 
--(void) setIsInitialValue: (BOOL) isInitialValue atRow: (int) row andCol: (int) col {
+-(void) setCellIsMutable: (bool) isMutable atRow: (int) row andColumn: (int) col
+{
     int adjustedIndex = (row*9) + col;
     
-    PJGridCellView* current = [_gridCellArray objectAtIndex:adjustedIndex];
-    [current setIsInitialValue:isInitialValue];
+    DCPYGridCellView* current = [_gridCellArray objectAtIndex:adjustedIndex];
+    [current setIsMutable:isMutable];
+}
+
+-(id) getSenderAtRow: (int) row andCol: (int) col {
+    return [[_gridCellArray objectAtIndex: (row * 9 + col)] getSender];
 }
 
 
