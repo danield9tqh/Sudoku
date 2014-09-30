@@ -13,7 +13,7 @@
     int _row;
     int _col;
     int _value;
-    BOOL _isMutable;
+    bool _isMutable;
 }
 
 @end
@@ -47,7 +47,7 @@
     _value = value;
     if (value != 0) {
         [_button setTitle:[NSString stringWithFormat:@"%d",_value] forState:UIControlStateNormal];
-        [_button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+        [_button setTitleColor:[UIColor colorWithRed: .3 green: .7 blue: .1 alpha: 1] forState:UIControlStateNormal];
     }else{
         [_button setTitle:@"" forState:UIControlStateNormal];
     }
@@ -55,12 +55,12 @@
 }
 -(void) setIsMutable: (BOOL) isMutable {
     _isMutable = isMutable;
-    [_button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [_button setTitleColor:[UIColor colorWithRed: .1 green: .2 blue: .5 alpha: 1] forState:UIControlStateNormal];
 }
 
 -(void) buttonHighlight: (id) sender {
     if (_isMutable) {
-        [_button setBackgroundColor:[UIColor yellowColor]];
+        [_button setBackgroundColor:[UIColor colorWithRed: .6 green: .9 blue: .1 alpha: 1]];
     }
 }
 -(void) buttonSelected:(id) sender {
@@ -76,6 +76,18 @@
 
 -(int) getCol {
     return _col;
+}
+
+-(UIButton*) getButton
+{
+    return _button;
+}
+
+-(void) flashButton {
+    [_button setBackgroundColor: [UIColor colorWithRed: .6 green: .9 blue: .1 alpha: .6]];
+}
+-(void) restoreColor {
+    [_button setBackgroundColor: [UIColor whiteColor]];
 }
 
 

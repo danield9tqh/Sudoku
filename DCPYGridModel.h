@@ -10,10 +10,15 @@
 
 @interface DCPYGridModel : NSObject
 
+-(CGFloat) percentDone;
+
 -(int) getValueAtRow: (int) row andColumn: (int) col;
 -(void) setValueAtRow: (int) row andColumn: (int) col to: (int) value;
 -(bool) isMutableAtRow: (int) row andColumn: (int) col;
 -(bool) isConsistentAtRow: (int) row andColumn:(int) col for: (int) value;
 -(bool) gameIsOver;
+-(void) generateGrid;
+-(bool) rowIsFilledAt: (int) row;
+-(bool) colIsFilledAt: (int) col;
 
 @end

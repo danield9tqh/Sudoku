@@ -80,5 +80,38 @@
     return [[_gridCellArray objectAtIndex: (row * 9 + col)] getSender];
 }
 
+-(void) flashRow: (int) row {
+    for (int i = 0; i < 9; i++) {
+        DCPYGridCellView* gridCellView = [_gridCellArray objectAtIndex:(row*9+i)];
+        dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, .1 * NSEC_PER_SEC);
+        dispatch_after(time, dispatch_get_main_queue(), ^(void) {
+            [gridCellView flashButton];
+        });
+    }
+    for (int i = 0; i < 9; i++) {
+        DCPYGridCellView* gridCellView = [_gridCellArray objectAtIndex:(row*9+i)];
+        dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC);
+        dispatch_after(time, dispatch_get_main_queue(), ^(void) {
+            [gridCellView restoreColor];
+        });
+    }
+}
+
+-(void) flashCol: (int) col {
+    for (int i = 0; i < 9; i++) {
+        DCPYGridCellView* gridCellView = [_gridCellArray objectAtIndex:(i*9+col)];
+        dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, .1 * NSEC_PER_SEC);
+        dispatch_after(time, dispatch_get_main_queue(), ^(void) {
+            [gridCellView flashButton];
+        });
+    }
+    for (int i = 0; i < 9; i++) {
+        DCPYGridCellView* gridCellView = [_gridCellArray objectAtIndex:(i*9+col)];
+        dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC);
+        dispatch_after(time, dispatch_get_main_queue(), ^(void) {
+            [gridCellView restoreColor];
+        });
+    }
+}
 
 @end

@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface DCPYGridCellView : UIView
+
+-(UIButton*) getButton;
 -(void) initButtonAtRow:(int) row AndColumn: (int) col;
 -(void) setCellValue: (int) value;
 -(void) setIsMutable: (BOOL) isMutable;
@@ -16,4 +18,7 @@
 -(id) getSender;
 -(int) getCol;
 -(int) getRow;
+-(void) flashButton;
+-(void) restoreColor;
+
 @end

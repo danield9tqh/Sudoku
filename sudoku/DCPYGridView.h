@@ -15,5 +15,7 @@
 -(void) setCellValue: (int) val atRow: (int) row andColumn: (int) col;
 -(void) setCellIsMutable: (bool) isMutable atRow: (int) row andColumn: (int) col;
 -(id) getSenderAtRow: (int) row andCol: (int) col;
+-(void) flashRow: (int) row;
+-(void) flashCol: (int) col;
 
 @end

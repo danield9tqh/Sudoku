@@ -23,8 +23,12 @@
 		0FE98FEE19C25CCE00D46491 /* sudokuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE98FED19C25CCE00D46491 /* sudokuTests.m */; };
 		0FE98FF919C25FF500D46491 /* DCPYGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE98FF819C25FF500D46491 /* DCPYGridView.m */; };
 		0FE98FFC19C2600100D46491 /* DCPYGridCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE98FFB19C2600100D46491 /* DCPYGridCellView.m */; };
+		65A4801919D7AB9B00C4C278 /* grid1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65A4801819D7AB9B00C4C278 /* grid1.txt */; };
+		65A4802319D7B10200C4C278 /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 65A4802219D7B10200C4C278 /* bg.jpg */; };
 		65EC271719CE6508004EC5E6 /* DCPYGridModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EC271619CE6508004EC5E6 /* DCPYGridModel.m */; };
 		65EC271A19CE71F2004EC5E6 /* DCPYNumPadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EC271919CE71F2004EC5E6 /* DCPYNumPadView.m */; };
+		65F261C519D5F10E001BE954 /* StartButtonDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F261C319D5F10E001BE954 /* StartButtonDown.png */; };
+		65F261C619D5F10E001BE954 /* startButtonUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F261C419D5F10E001BE954 /* startButtonUp.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,10 +65,14 @@
 		0FE98FF819C25FF500D46491 /* DCPYGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPYGridView.m; sourceTree = "<group>"; };
 		0FE98FFA19C2600100D46491 /* DCPYGridCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPYGridCellView.h; sourceTree = "<group>"; };
 		0FE98FFB19C2600100D46491 /* DCPYGridCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPYGridCellView.m; sourceTree = "<group>"; };
+		65A4801819D7AB9B00C4C278 /* grid1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = grid1.txt; sourceTree = "<group>"; };
+		65A4802219D7B10200C4C278 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 		65EC271519CE6508004EC5E6 /* DCPYGridModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCPYGridModel.h; path = ../DCPYGridModel.h; sourceTree = "<group>"; };
 		65EC271619CE6508004EC5E6 /* DCPYGridModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCPYGridModel.m; path = ../DCPYGridModel.m; sourceTree = "<group>"; };
 		65EC271819CE71F2004EC5E6 /* DCPYNumPadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPYNumPadView.h; sourceTree = "<group>"; };
 		65EC271919CE71F2004EC5E6 /* DCPYNumPadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPYNumPadView.m; sourceTree = "<group>"; };
+		65F261C319D5F10E001BE954 /* StartButtonDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StartButtonDown.png; path = ../../../../../../../Desktop/StartButtonDown.png; sourceTree = "<group>"; };
+		65F261C419D5F10E001BE954 /* startButtonUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = startButtonUp.png; path = ../../../../../../../Desktop/startButtonUp.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +145,9 @@
 				0FE98FF819C25FF500D46491 /* DCPYGridView.m */,
 				0FE98FFA19C2600100D46491 /* DCPYGridCellView.h */,
 				0FE98FFB19C2600100D46491 /* DCPYGridCellView.m */,
+				65A4802219D7B10200C4C278 /* bg.jpg */,
+				65F261C319D5F10E001BE954 /* StartButtonDown.png */,
+				65F261C419D5F10E001BE954 /* startButtonUp.png */,
 				0FE98FDA19C25CCD00D46491 /* Images.xcassets */,
 				0FE98FC919C25CCD00D46491 /* Supporting Files */,
 			);
@@ -146,6 +157,7 @@
 		0FE98FC919C25CCD00D46491 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				65A4801819D7AB9B00C4C278 /* grid1.txt */,
 				0FE98FCA19C25CCD00D46491 /* sudoku-Info.plist */,
 				0FE98FCB19C25CCD00D46491 /* InfoPlist.strings */,
 				0FE98FCE19C25CCD00D46491 /* main.m */,
@@ -249,7 +261,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65A4801919D7AB9B00C4C278 /* grid1.txt in Resources */,
 				0FE98FDB19C25CCD00D46491 /* Images.xcassets in Resources */,
+				65F261C619D5F10E001BE954 /* startButtonUp.png in Resources */,
+				65F261C519D5F10E001BE954 /* StartButtonDown.png in Resources */,
+				65A4802319D7B10200C4C278 /* bg.jpg in Resources */,
 				0FE98FCD19C25CCD00D46491 /* InfoPlist.strings in Resources */,
 				0FE98FD619C25CCD00D46491 /* Main.storyboard in Resources */,
 			);
@@ -403,6 +419,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "sudoku/sudoku-Prefix.pch";
 				INFOPLIST_FILE = "sudoku/sudoku-Info.plist";

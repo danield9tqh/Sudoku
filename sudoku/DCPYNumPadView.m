@@ -34,26 +34,26 @@
             
         CGSize frameSize = self.bounds.size;
         
-        // calculating the position and size
+        // Calculate the position and size
         int cellCount = 10;
         CGFloat x = frameSize.width / cellCount * c + 0.08 * frameSize.height;
         CGFloat y = 0.08 * frameSize.height;
         CGFloat size = 0.84 * frameSize.height;
         
-        // frame for each button, initialize button
+        // Frame for each button, initialize button
         CGRect buttonFrame = CGRectMake(x, y, size, size);
         UIButton* button = [[UIButton alloc] initWithFrame:buttonFrame];
         button.backgroundColor = [UIColor whiteColor];
         button.tag = c;
         
-        // add view as subview and object to array
+        // Add view as subview and object to array
         [self addSubview: button];
         [_numPadCellArray addObject: button];
         
-        // set number for button
+        // Set number for button
         if (c != 0) {
             [button setTitle:[NSString stringWithFormat:@"%d",c] forState:UIControlStateNormal];
-            [button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+            [button setTitleColor:[UIColor colorWithRed: .3 green: .7 blue: .1 alpha: 1] forState:UIControlStateNormal];
         }
         
         // add target to button
@@ -70,8 +70,10 @@
 {
     UIButton *button = [_numPadCellArray objectAtIndex:_currentValue];
     [button setBackgroundColor:[UIColor whiteColor]];
+    [button setTitleColor:[UIColor colorWithRed: .3 green: .7 blue: .1 alpha: 1] forState:UIControlStateNormal];
     button = (UIButton *)sender;
-    [button setBackgroundColor:[UIColor yellowColor]];
+    [button setBackgroundColor:[UIColor colorWithRed: .6 green: .9 blue: .1 alpha: 1]];
+    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     _currentValue = (int) button.tag;
 }
 

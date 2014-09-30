@@ -10,32 +10,26 @@
 
 @implementation DCPYGridModel
 
-int grid[9][9] = {
-    {7,0,0,4,2,0,0,0,9},
-    {0,0,9,5,0,0,0,0,4},
-    {0,2,0,6,9,0,5,0,0},
-    {6,5,0,0,0,0,4,3,0},
-    {0,8,0,0,0,6,0,0,7},
-    {0,1,0,0,4,5,6,0,0},
-    {0,0,0,8,6,0,0,0,2},
-    {3,4,0,9,0,0,1,0,0},
-    {8,0,0,3,0,2,7,4,0}
-};
-
-int initialGrid[9][9] = {
-    {7,0,0,4,2,0,0,0,9},
-    {0,0,9,5,0,0,0,0,4},
-    {0,2,0,6,9,0,5,0,0},
-    {6,5,0,0,0,0,4,3,0},
-    {0,8,0,0,0,6,0,0,7},
-    {0,1,0,0,4,5,6,0,0},
-    {0,0,0,8,6,0,0,0,2},
-    {3,4,0,9,0,0,1,0,0},
-    {8,0,0,3,0,2,7,4,0}
-};
+int grid[9][9];
+int initialGrid[9][9];
 
 -(void) generateGrid
 {
+
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"grid1" ofType:@"txt"];
+    NSError* error;
+    
+    // Read grids from text file
+    NSString* readString = [[NSString alloc] initWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
+    int numGrids = (int)readString.length/82;
+    int gridNumber = arc4random_uniform(numGrids);
+    NSRange range = NSMakeRange(gridNumber*82, 81);
+    NSString* gridString = [readString substringWithRange:range];
+    for (int i=0; i<81; i++) {
+        initialGrid[i/9][i%9] = [[gridString substringWithRange:NSMakeRange(i, 1)] intValue];
+        grid[i/9][i%9] = [[gridString substringWithRange:NSMakeRange(i, 1)] intValue];
+    }
+    
     
 }
 
@@ -91,9 +85,37 @@ int initialGrid[9][9] = {
     return isConsistent;
 }
 
+-(CGFloat) percentDone {
+    int numDone = 0;
+    for (int i = 0; i < 9; i++) {
+        for (int j = 0; j < 9; j++) {
+            if(grid[i][j] != 0)
+                numDone++;
+        }
+    }
+    return numDone / 81.0;
+}
+
+-(bool) rowIsFilledAt: (int) row {
+    for (int i = 0; i < 9; i++) {
+        if (grid[row][i] == 0)
+            return false;
+    }
+    return true;
+}
+
+-(bool) colIsFilledAt: (int) col {
+    for (int i = 0; i < 9; i++) {
+        if (grid[i][col] == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
 -(bool) gameIsOver {
-    for (int i = 0; i<9; i++) {
-        for(int j=0; j<9; j++){
+    for (int i = 0; i < 9; i++) {
+        for(int j=0; j < 9; j++){
             if(grid[i][j] == 0){
                 return false;
             }
