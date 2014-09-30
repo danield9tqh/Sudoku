@@ -8,7 +8,8 @@
 
 #import "DCPYViewController.h"
 
-@interface DCPYViewController () {
+@interface DCPYViewController ()
+{
     DCPYGridView* _gridView;
     DCPYGridModel* _gridModel;
     DCPYNumPadView* _numPadView;
@@ -76,16 +77,16 @@
     [_numPadView drawNumPad];
     
     // Create start button
-    CGRect startGameFrame = CGRectMake(CGRectGetWidth(frame) / 2 - 75, CGRectGetHeight(frame) * 0.83, 150, 150);
-    UIButton* startButton;
-    startButton = [[UIButton alloc] initWithFrame:startGameFrame];
-    [self.view addSubview:startButton];
-    [startButton setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
-    [startButton.titleLabel setFont:[UIFont systemFontOfSize:25]];
-    [startButton setImage:[UIImage imageNamed:@"StartButtonUp.png"] forState:UIControlStateNormal];
-    [startButton setImage:[UIImage imageNamed:@"StartButtonDown.png"] forState:UIControlStateHighlighted];
+    CGRect newGameFrame = CGRectMake(CGRectGetWidth(frame) / 2 - 75, CGRectGetHeight(frame) * 0.83, 150, 150);
+    UIButton* newGameButton;
+    newGameButton = [[UIButton alloc] initWithFrame:newGameFrame];
+    [self.view addSubview:newGameButton];
+    [newGameButton setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+    [newGameButton.titleLabel setFont:[UIFont systemFontOfSize:25]];
+    [newGameButton setImage:[UIImage imageNamed:@"StartButtonUp.png"] forState:UIControlStateNormal];
+    [newGameButton setImage:[UIImage imageNamed:@"StartButtonDown.png"] forState:UIControlStateHighlighted];
     
-    [startButton addTarget:self action:@selector(newGame) forControlEvents:UIControlEventTouchUpInside];
+    [newGameButton addTarget:self action:@selector(newGame) forControlEvents:UIControlEventTouchUpInside];
     
     // Add targets to grid cells
     for (int r = 0; r < 9; r++) {
@@ -124,7 +125,8 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void) initGridValues {
+-(void) initGridValues
+{
     for (int col = 0; col < 9; col++) {
         for (int row = 0; row < 9; row++) {
             int value = [_gridModel getValueAtRow: row andColumn: col];
@@ -133,7 +135,8 @@
     }
 }
 
--(void) setCellsMutable {
+-(void) setCellsMutable
+{
     for (int col = 0; col < 9; col++) {
         for (int row = 0; row < 9; row++) {
             bool isMutable = [_gridModel isMutableAtRow:row andColumn:col];
@@ -142,7 +145,8 @@
     }
 }
 
--(void) buttonSelected: (id) sender {
+-(void) buttonSelected: (id) sender
+{
     UIButton* button = (UIButton *)sender;
     int row = (int) button.tag/9;
     int col = button.tag%9;

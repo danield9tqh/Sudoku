@@ -59,10 +59,8 @@
     }
 }
 
-/* method to set a given cell value at a specified row and column in an existing 
-    sudoku grid
- */
--(void) setCellValue: (int) val atRow: (int) row andColumn: (int) col {
+-(void) setCellValue: (int) val atRow: (int) row andColumn: (int) col
+{
     int adjustedIndex = (row*9) + col;
     DCPYGridCellView* current = [_gridCellArray objectAtIndex:adjustedIndex];
     [current setCellValue:val];
@@ -72,15 +70,17 @@
 {
     int adjustedIndex = (row*9) + col;
     
-    DCPYGridCellView* current = [_gridCellArray objectAtIndex:adjustedIndex];
-    [current setIsMutable:isMutable];
+    DCPYGridCellView* gridCellView = [_gridCellArray objectAtIndex:adjustedIndex];
+    [gridCellView setIsMutable:isMutable];
 }
 
--(id) getSenderAtRow: (int) row andCol: (int) col {
+-(id) getSenderAtRow: (int) row andCol: (int) col
+{
     return [[_gridCellArray objectAtIndex: (row * 9 + col)] getSender];
 }
 
--(void) flashRow: (int) row {
+-(void) flashRow: (int) row
+{
     for (int i = 0; i < 9; i++) {
         DCPYGridCellView* gridCellView = [_gridCellArray objectAtIndex:(row*9+i)];
         dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, .1 * NSEC_PER_SEC);
@@ -97,7 +97,8 @@
     }
 }
 
--(void) flashCol: (int) col {
+-(void) flashCol: (int) col
+{
     for (int i = 0; i < 9; i++) {
         DCPYGridCellView* gridCellView = [_gridCellArray objectAtIndex:(i*9+col)];
         dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, .1 * NSEC_PER_SEC);

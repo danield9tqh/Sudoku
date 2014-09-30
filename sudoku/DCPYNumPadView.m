@@ -8,7 +8,8 @@
 
 #import "DCPYNumPadView.h"
 
-@interface DCPYNumPadView () {
+@interface DCPYNumPadView ()
+{
     NSMutableArray* _numPadCellArray;
     int _currentValue;
 }
@@ -24,8 +25,6 @@
     return self;
 }
 
-/* method to draw the sudoku grid
- */
 - (void)drawNumPad
 {
     _numPadCellArray = [[NSMutableArray alloc] init];

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0FE98FC319C25CCD00D46491 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FE98FC219C25CCD00D46491 /* Foundation.framework */; };
-		0FE98FC519C25CCD00D46491 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FE98FC419C25CCD00D46491 /* CoreGraphics.framework */; };
+		0FE98FC519C25CCD00D46491 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FE98FC419C25CCD00D46491 /* CoreGraphics.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		0FE98FC719C25CCD00D46491 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FE98FC619C25CCD00D46491 /* UIKit.framework */; };
 		0FE98FCD19C25CCD00D46491 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0FE98FCB19C25CCD00D46491 /* InfoPlist.strings */; };
 		0FE98FCF19C25CCD00D46491 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE98FCE19C25CCD00D46491 /* main.m */; };
@@ -67,8 +67,8 @@
 		0FE98FFB19C2600100D46491 /* DCPYGridCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPYGridCellView.m; sourceTree = "<group>"; };
 		65A4801819D7AB9B00C4C278 /* grid1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = grid1.txt; sourceTree = "<group>"; };
 		65A4802219D7B10200C4C278 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
-		65EC271519CE6508004EC5E6 /* DCPYGridModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCPYGridModel.h; path = ../DCPYGridModel.h; sourceTree = "<group>"; };
-		65EC271619CE6508004EC5E6 /* DCPYGridModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCPYGridModel.m; path = ../DCPYGridModel.m; sourceTree = "<group>"; };
+		65EC271519CE6508004EC5E6 /* DCPYGridModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPYGridModel.h; sourceTree = "<group>"; };
+		65EC271619CE6508004EC5E6 /* DCPYGridModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPYGridModel.m; sourceTree = "<group>"; };
 		65EC271819CE71F2004EC5E6 /* DCPYNumPadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPYNumPadView.h; sourceTree = "<group>"; };
 		65EC271919CE71F2004EC5E6 /* DCPYNumPadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPYNumPadView.m; sourceTree = "<group>"; };
 		65F261C319D5F10E001BE954 /* StartButtonDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StartButtonDown.png; path = ../../../../../../../Desktop/StartButtonDown.png; sourceTree = "<group>"; };
@@ -194,6 +194,7 @@
 				0FE98FBB19C25CCD00D46491 /* Sources */,
 				0FE98FBC19C25CCD00D46491 /* Frameworks */,
 				0FE98FBD19C25CCD00D46491 /* Resources */,
+				658545B719DA4EB000CE22A9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -281,6 +282,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		658545B719DA4EB000CE22A9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = XcodeCoverage/exportenv.sh;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0FE98FBB19C25CCD00D46491 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -362,6 +379,8 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",

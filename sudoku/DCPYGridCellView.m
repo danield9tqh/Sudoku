@@ -25,21 +25,23 @@
     if (self) {}
     return self;
 }
--(void) initButtonAtRow:(int) row AndColumn: (int) col{
+
+-(void) initButtonAtRow:(int) row AndColumn: (int) col
+{
     // button fields
     _row = row;
     _col = col;
     
-    // creating a button
+    // create a button
     CGSize cellSize = self.bounds.size;
     CGRect buttonFrame = CGRectMake(0, 0, cellSize.width, cellSize.height);
     _button = [[UIButton alloc] initWithFrame:buttonFrame];
     _button.tag = row * 9 + col;
     
     // button properties (highlight when touched, released when finger lifts up)
-    [_button addTarget:self action:@selector(buttonHighlight:) forControlEvents:UIControlEventTouchDown];
-    [_button addTarget:self action:@selector(buttonSelected:) forControlEvents:UIControlEventTouchUpInside];
-    [_button addTarget:self action:@selector(buttonSelected:) forControlEvents:UIControlEventTouchUpOutside];
+    [_button addTarget:self action:@selector(cellHighlight:) forControlEvents:UIControlEventTouchDown];
+    [_button addTarget:self action:@selector(cellSelected:) forControlEvents:UIControlEventTouchUpInside];
+    [_button addTarget:self action:@selector(cellSelected:) forControlEvents:UIControlEventTouchUpOutside];
     [self addSubview:_button];
 }
 
@@ -53,40 +55,46 @@
     }
 
 }
--(void) setIsMutable: (BOOL) isMutable {
+-(void) setIsMutable: (BOOL) isMutable
+{
     _isMutable = isMutable;
     [_button setTitleColor:[UIColor colorWithRed: .1 green: .2 blue: .5 alpha: 1] forState:UIControlStateNormal];
 }
 
--(void) buttonHighlight: (id) sender {
+-(void) cellHighlight: (id) sender
+{
     if (_isMutable) {
         [_button setBackgroundColor:[UIColor colorWithRed: .6 green: .9 blue: .1 alpha: 1]];
     }
 }
--(void) buttonSelected:(id) sender {
+
+-(void) cellSelected:(id) sender
+{
     [_button setBackgroundColor:[UIColor whiteColor]];
 }
--(id) getSender {
-    return _button;
-}
 
--(int) getRow {
-    return _row;
-}
-
--(int) getCol {
-    return _col;
-}
-
--(UIButton*) getButton
+-(id) getSender
 {
     return _button;
 }
 
--(void) flashButton {
+-(int) getRow
+{
+    return _row;
+}
+
+-(int) getCol
+{
+    return _col;
+}
+
+-(void) flashButton
+{
     [_button setBackgroundColor: [UIColor colorWithRed: .6 green: .9 blue: .1 alpha: .6]];
 }
--(void) restoreColor {
+
+-(void) restoreColor
+{
     [_button setBackgroundColor: [UIColor whiteColor]];
 }
 

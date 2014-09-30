@@ -10,11 +10,10 @@
 
 @interface DCPYGridCellView : UIView
 
--(UIButton*) getButton;
 -(void) initButtonAtRow:(int) row AndColumn: (int) col;
 -(void) setCellValue: (int) value;
 -(void) setIsMutable: (BOOL) isMutable;
--(void) buttonSelected:(id) sender;
+-(void) cellSelected:(id) sender;
 -(id) getSender;
 -(int) getCol;
 -(int) getRow;
