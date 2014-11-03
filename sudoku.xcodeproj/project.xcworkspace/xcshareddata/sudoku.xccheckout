@@ -14,7 +14,7 @@
 		<string>https://github.com/danield9tqh/Sudoku</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>sudoku.xcodeproj/project.xcworkspace</string>
+	<string>sudoku.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>8298EC8B5542DB4CF44DA7F0AD8E980C3EE538A2</key>

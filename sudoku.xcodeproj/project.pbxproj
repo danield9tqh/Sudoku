@@ -71,8 +71,8 @@
 		65EC271619CE6508004EC5E6 /* DCPYGridModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPYGridModel.m; sourceTree = "<group>"; };
 		65EC271819CE71F2004EC5E6 /* DCPYNumPadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPYNumPadView.h; sourceTree = "<group>"; };
 		65EC271919CE71F2004EC5E6 /* DCPYNumPadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPYNumPadView.m; sourceTree = "<group>"; };
-		65F261C319D5F10E001BE954 /* StartButtonDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StartButtonDown.png; path = ../../../../../../../Desktop/StartButtonDown.png; sourceTree = "<group>"; };
-		65F261C419D5F10E001BE954 /* startButtonUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = startButtonUp.png; path = ../../../../../../../Desktop/startButtonUp.png; sourceTree = "<group>"; };
+		65F261C319D5F10E001BE954 /* StartButtonDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StartButtonDown.png; path = Images.xcassets/StartButtonDown.imageset/StartButtonDown.png; sourceTree = "<group>"; };
+		65F261C419D5F10E001BE954 /* startButtonUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = startButtonUp.png; path = Images.xcassets/startButtonUp.imageset/startButtonUp.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
